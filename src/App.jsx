@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './Header';
 import Footer from './Footer';
 import Content from './Content';
-import Login  from './Login';
+import Login  from './auth/Login';
 import Register from './auth/Register';
 import RegisterSuccess from './auth/RegisterSuccess'
 import RegisterFail from './auth/RegisterFail';
+import ProfileDetails from './profile/ProfileDetails';
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path='/success' element={<RegisterSuccess/>}/>
         <Route path='/fail' element={<RegisterFail/>}/>
+        <Route path='/fail' element={<RegisterFail/>}/>
+        <Route path='/myProfile' element={<ProfileDetails/>}/>
       </Routes>
       <Footer/>
     </Router>

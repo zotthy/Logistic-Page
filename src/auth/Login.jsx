@@ -1,31 +1,27 @@
 import React, { useState } from 'react';
 import axios from "axios";
-import { redirect } from 'react-router-dom';
-import useSignIn from 'react-auth-kit/hooks/useSignIn';
+import { useNavigate } from 'react-router-dom';
 
+function Login() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-class signInComponent extends React.Component {
-  state={email: '', password: ''}
+  const loginRequest = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(`http://localhost:8080/login`, {
+        username: email,
+        password: password
+      });
+      localStorage.setItem('jwtToken',response.data);
+      console.log(response.data);
+      navigate("/");
+    } catch (error) {
+      console.error('Login failed', error);
+    }
+  };
 
-  onSubmit = (e) => {
-      e.preventDefault()
-      axios.post('http://localhost:8080/login', this.state)
-          .then((res)=>{
-              if(res.status === 200){
-                  if(this.props.signIn({
-                      auth: {
-                          token: 'ey....mA',
-                          type: 'Bearer'
-                      }
-                  })){
-                      // Redirect or do-something
-                  }else {
-                      //Throw error
-                  }
-              }
-          })
-  }
-}
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
