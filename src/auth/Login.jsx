@@ -14,7 +14,7 @@ function Login() {
         username: email,
         password: password
       });
-      localStorage.setItem('jwtToken',response.data);
+      localStorage.setItem('Token',JSON.stringify(response.data));
       console.log(response.data);
       navigate("/");
     } catch (error) {

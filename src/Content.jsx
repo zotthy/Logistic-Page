@@ -7,6 +7,7 @@ function Content() {
   const [size, setSize] = useState(10);
 
   useEffect(() => {
+    const token = localStorage.getItem('Token');
     axios.get(`http://localhost:8080/cargo?page=${page}&size=${size}`)
        .then(response => {
           setCargos(response.data.content);
