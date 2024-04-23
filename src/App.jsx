@@ -11,6 +11,7 @@ import ProfileDetails from './profile/ProfileDetails';
 import Protect from './RouteProtect/Protect';
 import HomePage from './HomePage/HomePage';
 import ProfileAddAddress from './profile/ProfileAddAddress';
+import Driver from './DriverPage/Driver';
 
 
 function App() {
@@ -24,6 +25,10 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/success" element={<RegisterSuccess/>}/>
         <Route path="/fail" element={<RegisterFail/>}/>
+
+
+        <Route path="/driver" element={<Driver />}/>
+
         
         <Route path="/auth" element={<Protect />}>
             <Route path="myProfile" element={<ProfileDetails />}/>
