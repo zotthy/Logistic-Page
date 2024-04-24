@@ -12,6 +12,8 @@ import Protect from './RouteProtect/Protect';
 import HomePage from './HomePage/HomePage';
 import ProfileAddAddress from './profile/ProfileAddAddress';
 import Driver from './DriverPage/Driver';
+import Cargo from './CargoPage/Cargo';
+import DriverNew from './DriverPage/DriverNew';
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
 
 
         <Route path="/driver" element={<Driver />}/>
+        <Route path="/cargo" element={<Cargo />}/>
+        <Route path="/driverNew" element={<DriverNew/>}/>
 
         
         <Route path="/auth" element={<Protect />}>
