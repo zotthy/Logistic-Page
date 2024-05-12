@@ -1,6 +1,7 @@
 import Footer from "../Footer/Footer";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import logo from "/Users/sebastianstarzec/LogisticApiFront/my-project/src/assets/logo.svg"
 
 function Header() {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ function Header() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/2554/2554978.png"
+            src={logo}
             className="h-8"
             alt="SwiftWay Transport"
           />
@@ -33,40 +34,35 @@ function Header() {
               </a>
             </li>
             <li>
-              <a
-                href="/login"
+              <a href="/login"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 My Job
               </a>
             </li>
             <li>
-              <a
-                href="#"
+              <a href=""
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 My cargo
               </a>
             </li>
             <li>
-              <a
-                href="/driver"
+              <a href="/driver"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 My driver
               </a>
             </li>
             <li>
-              <a
-                href="#"
+              <a href="/cargoAdd"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Add Cargo
               </a>
             </li>
             <li>
-              <a
-                href="/auth/myProfile"
+              <a href="/auth/myProfile"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 My profile
