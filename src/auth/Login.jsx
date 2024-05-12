@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
+import InputAuth from '../components/inputs/InputAuth';
+import LabelFromAuth from '../components/labels/LabelFromAuth';
+import ButtonAuth from '../components/buttons/ButtonAuth';
 
 function Login() {
   const navigate = useNavigate();
@@ -41,34 +44,14 @@ function Login() {
         </h2>
         <form onSubmit={loginRequest}> 
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-semibold mb-2">Email Address *</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500"
-              required
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="user@com.com"
-            />
+            <LabelFromAuth>E-mail*</LabelFromAuth>
+            <InputAuth initialType="text" placeholderPattern="user@com.pl" setValue={setEmail}/>
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-semibold mb-2">Password * </label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500"
-              required
-              placeholder="••••••••"
-            />
+            <LabelFromAuth>Password*</LabelFromAuth>
+            <InputAuth initialType="text" placeholderPattern="*******" setValue={setPassword}/>
           </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-            Login
-          </button>
+          <ButtonAuth>Login</ButtonAuth>
         </form>
       </div>
     </div>

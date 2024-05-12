@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import DriverDetail from "./DriverDetail";
+import { Link } from "react-router-dom";
 
 function Driver(){
   const [driver, setDriver] = useState(null);
@@ -24,6 +26,9 @@ function Driver(){
   }, []);
   if (!driver) return null;
 
+
+  const driverId = 2;
+
     return(
     <div className="flex items-center justify-center min-h-64 ">
       <div className="bg-white p-3 shadow-sm rounded-sm">
@@ -42,7 +47,7 @@ function Driver(){
         </div>
 
         <div className="text-gray-600">
-          <div className="grid md:grid-cols-5 text-sm">
+          <div className="grid md:grid-cols-4 text-sm">
             <div className="grid grid-cols-2">
               <div className="px-4 py-2 font-semibold">First Name</div>
             </div>
@@ -55,12 +60,7 @@ function Driver(){
               </div>
             </div>
             <div className="grid grid-cols-2">
-              <div className="px-4 py-2 font-semibold">actual</div>
-              <div className="px-4 py-2">
-              </div>
-            </div>
-            <div className="grid grid-cols-2">
-              <div className="px-4 py-2 font-semibold">history</div>
+              <div className="px-4 py-2 font-semibold">Loads</div>
               <div className="px-4 py-2">
               </div>
             </div>
@@ -69,7 +69,7 @@ function Driver(){
 
         {driver.map((data, index)=>
           <div key={index} className="text-gray-600">
-          <div className="grid md:grid-cols-5 text-sm">
+          <div className="grid md:grid-cols-4 text-sm">
             <div className="grid grid-cols-2">
               <div className="px-4 py-2 font-semibold">{data.name}</div>
             </div>
@@ -80,10 +80,11 @@ function Driver(){
               <div className="px-4 py-2 font-semibold">{data.number}</div>
             </div>
             <div className="grid grid-cols-2">
-              <div className="px-4 py-2 font-semibold"><a href=""/>A</div>
-            </div>
-            <div className="grid grid-cols-2">
-              <div className="px-4 py-2 font-semibold"><a href=""/>H</div>
+              <div className="px-4 py-2 font-semibold">
+                <Link to={`/driver/${driverId}`}>
+                  <button>Go to Driver {driverId}</button>
+                </Link>  
+              </div>
             </div>
           </div>
         </div>

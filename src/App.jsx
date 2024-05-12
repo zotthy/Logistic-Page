@@ -14,6 +14,7 @@ import ProfileAddAddress from './profile/ProfileAddAddress';
 import Driver from './DriverPage/Driver';
 import Cargo from './CargoPage/Cargo';
 import DriverNew from './DriverPage/DriverNew';
+import DriverDetail from './DriverPage/DriverDetail';
 
 
 function App() {
@@ -30,9 +31,9 @@ function App() {
 
 
         <Route path="/driver" element={<Driver />}/>
-        <Route path="/cargo" element={<Cargo />}/>
+        <Route path="/cargoAdd" element={<Cargo />}/>
         <Route path="/driverNew" element={<DriverNew/>}/>
-
+        <Route path="/driver/:id" element={<DriverDetail/>} />
         
         <Route path="/auth" element={<Protect />}>
             <Route path="myProfile" element={<ProfileDetails />}/>

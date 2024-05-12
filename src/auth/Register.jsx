@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import RegisterFail from './RegisterFail';
+import InputAuth from '../components/inputs/InputAuth';
+import LabelFromAuth from '../components/labels/LabelFromAuth';
+import ButtonAuth from '../components/buttons/ButtonAuth';
+import userIcon from "/Users/sebastianstarzec/LogisticApiFront/my-project/src/assets/userIcon.svg"
 
 function Register() {
     const navigate = useNavigate();
@@ -33,13 +37,10 @@ function Register() {
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
         <div className="flex justify-center mb-6">
           <span className="inline-block bg-gray-200 rounded-full p-3">
-            <svg
-              xmlns=""
+            <img src={userIcon} 
               width="24"
               height="24"
-              viewBox="0 0 24 24">
-              <path fill="currentColor" />
-            </svg>
+              viewBox="0 0 24 24"/>
           </span>
         </div>
         <h2 className="text-2xl font-semibold text-center mb-4">
@@ -50,70 +51,25 @@ function Register() {
         </p>
         <form onSubmit={registerRequest}>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-semibold mb-2">
-              Name *
-            </label>
-            <input
-              type="text"
-              id="fullName"
-              className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500"
-              required
-              placeholder="James"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+            <LabelFromAuth>Name</LabelFromAuth>
+            <InputAuth initialType="text" placeholderPattern="James" setValue={setName}/>
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-semibold mb-2">
-              Surname *
-            </label>
-            <input
-              type="text"
-              id="fullName"
-              className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500"
-              required
-              placeholder="Brown"
-              value={surname}
-              onChange={(e) => setSurname(e.target.value)}
-            />
+            <LabelFromAuth>Surname</LabelFromAuth>
+            <InputAuth initialType="text" placeholderPattern="Kowalski" setValue={setSurname}/>
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-semibold mb-2">
-              Email Address *
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500"
-              required
-              placeholder="hello@alignui.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
+            <LabelFromAuth>E-mail</LabelFromAuth>
+            <InputAuth initialType="email" placeholderPattern="JamesKow@com.pl" setValue={setEmail}/>
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-semibold mb-2">
-              Password *
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500"
-              required
-              placeholder="••••••••"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <LabelFromAuth>Password</LabelFromAuth>
+            <InputAuth initialType="password" placeholderPattern="*******" setValue={setPassword}/>
             <p className="text-gray-600 text-xs mt-1">
              Min. 8 characters.
             </p>
           </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-          >
-            Register
-          </button>
+            <ButtonAuth>Register</ButtonAuth>
           <p className="text-gray-600 text-xs text-center mt-4">
             By clicking Register, you agree to accept Apex Financial's
             <a href="#" className="text-blue-500 hover:underline">
