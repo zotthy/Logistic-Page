@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import DriverDetail from "./DriverDetail";
-import { Link } from "react-router-dom";
 
 function Driver(){
   const [driver, setDriver] = useState(null);
@@ -26,8 +24,6 @@ function Driver(){
   }, []);
   if (!driver) return null;
 
-
-  const driverId = 2;
 
     return(
     <div className="flex items-center justify-center min-h-64 ">
@@ -81,9 +77,7 @@ function Driver(){
             </div>
             <div className="grid grid-cols-2">
               <div className="px-4 py-2 font-semibold">
-                <Link to={`/driver/${driverId}`}>
-                  <button>Go to Driver {driverId}</button>
-                </Link>  
+                <a href={`/driver/${data.id}`}>Cargo list</a>
               </div>
             </div>
           </div>

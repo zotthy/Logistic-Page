@@ -19,6 +19,8 @@ import CargoList from './CargoPage/CargoList';
 import CargoMyList from './CargoPage/CargoMyList';
 import CargoDetail from './CargoPage/CargoDetail';
 import GetJob from './CargoPage/GetJob';
+import CargoMyDetails from './CargoPage/CargoMyDetails';
+import CheckProfile from './profile/CheckProfile';
 
 
 function App() {
@@ -40,13 +42,16 @@ function App() {
         <Route path="/cargo/:id" element={<CargoDetail/>}/>
         
         <Route path="/my/cargo" element={<CargoMyList/>}/>
+        <Route path="/my/cargo/:id" element={<CargoMyDetails/>}/>
 
 
 
         <Route path="/driverNew" element={<DriverNew/>}/>
         <Route path="/driver" element={<Driver />}/>
         <Route path="/driver/:id" element={<DriverDetail/>} />
+        <Route path="/check/:email" element={<CheckProfile/>}/>
         
+
         <Route path="/getJob/:id" element={<GetJob/>}/>
 
 

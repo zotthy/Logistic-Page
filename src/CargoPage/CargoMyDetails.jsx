@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import MapTest from "/Users/sebastianstarzec/LogisticApiFront/my-project/src/assets/mapTest.png";
 
-function CargoDetail() {
+function CargoMyDetails() {
   const { id } = useParams();
   const [cargoDetails, setCargoDetails] = useState(null);
 
@@ -11,7 +11,7 @@ function CargoDetail() {
     const token = JSON.parse(localStorage.getItem("Token"));
     console.log(token);
     axios
-      .get(`http://localhost:8080/cargo/${id}`, {
+      .get(`http://localhost:8080/my/cargo/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -24,6 +24,8 @@ function CargoDetail() {
         console.error("Error:", error);
       });
   }, [id]);
+
+  console.log(cargoDetails);
   if (!cargoDetails) return null;
 
   return (
@@ -40,7 +42,7 @@ function CargoDetail() {
               Price
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              {cargoDetails.price}
+              {cargoDetails.cargoPrice}
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -51,20 +53,13 @@ function CargoDetail() {
               {cargoDetails.typeCargo}
             </dd>
           </div>
+        
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">
-              Owner
+              Create cargo date
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              <a href={`/check/${cargoDetails.owner}`}>{cargoDetails.owner}</a>
-            </dd>
-          </div>
-          <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
-              Create cargo
-            </dt>
-            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              {cargoDetails.localDateTime}
+              {cargoDetails.cargoDateTime}
             </dd>
           </div>
 
@@ -91,6 +86,26 @@ function CargoDetail() {
           </div>
 
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt className="text-sm font-medium leading-6 text-gray-900">
+              Carrier
+            </dt>
+            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+              <p>{cargoDetails.handlerFirstName}</p>
+              <p>{cargoDetails.handlerLastName}</p>
+            </dd>
+          </div>
+
+          <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt className="text-sm font-medium leading-6 text-gray-900">
+              Driver
+            </dt>
+            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+              <p>{cargoDetails.driverFirstName}</p>
+              <p>{cargoDetails.driverSurname}</p>
+            </dd>
+          </div>
+
+          <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">Map</dt>
             <dd className="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
               <img
@@ -101,18 +116,10 @@ function CargoDetail() {
               />
             </dd>
           </div>
-
-          <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
-              <h1>fds</h1>
-            </dt>
-            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              <a href={`/getJob/${cargoDetails.id}`}>Get Job</a>
-            </dd>
-          </div>
         </dl>
       </div>
     </div>
   );
 }
-export default CargoDetail;
+
+export default CargoMyDetails;
