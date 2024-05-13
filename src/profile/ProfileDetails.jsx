@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { json, useNavigate } from "react-router-dom";
 
 function ProfileDetails() {
   const [profile, setProfile] = useState(null);
