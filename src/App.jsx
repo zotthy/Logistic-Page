@@ -15,6 +15,10 @@ import Driver from './DriverPage/Driver';
 import Cargo from './CargoPage/Cargo';
 import DriverNew from './DriverPage/DriverNew';
 import DriverDetail from './DriverPage/DriverDetail';
+import CargoList from './CargoPage/CargoList';
+import CargoMyList from './CargoPage/CargoMyList';
+import CargoDetail from './CargoPage/CargoDetail';
+import GetJob from './CargoPage/GetJob';
 
 
 function App() {
@@ -30,11 +34,23 @@ function App() {
         <Route path="/fail" element={<RegisterFail/>}/>
 
 
-        <Route path="/driver" element={<Driver />}/>
         <Route path="/cargoAdd" element={<Cargo />}/>
+        <Route path="/cargo" element={<CargoList/>}/>
+
+        <Route path="/cargo/:id" element={<CargoDetail/>}/>
+        
+        <Route path="/my/cargo" element={<CargoMyList/>}/>
+
+
+
         <Route path="/driverNew" element={<DriverNew/>}/>
+        <Route path="/driver" element={<Driver />}/>
         <Route path="/driver/:id" element={<DriverDetail/>} />
         
+        <Route path="/getJob/:id" element={<GetJob/>}/>
+
+
+
         <Route path="/auth" element={<Protect />}>
             <Route path="myProfile" element={<ProfileDetails />}/>
             <Route path="addAdress" element={<ProfileAddAddress/>}/>
