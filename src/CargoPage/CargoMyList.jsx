@@ -119,6 +119,6 @@ function CargoMyList(){
         </div>
 
 </>
-        );
+);
 }
 export default CargoMyList;

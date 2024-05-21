@@ -27,7 +27,7 @@ function Register() {
       } catch (error) {
         if (error.response && error.response.status === 400) {
             console.error('Bad Request: ', error.response.data);
-            navigate("/fail")//user is exists
+            navigate("/fail");
         } 
     }
     };
