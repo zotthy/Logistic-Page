@@ -1,10 +1,12 @@
-// eslint-disable-next-line react/prop-types
+// eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {useParams} from "react-router-dom";
-import MapTest from "/Users/sebastianstarzec/LogisticApiFront/my-project/src/assets/mapTest.png";
+import MapTest from "../assets/mapTest.png";
+import Button from "../components/buttons/Button.jsx";
+import {data} from "autoprefixer";
 
-function CargoDetail() {
+function DriverActualCargo() {
     const {id} = useParams();
     const [cargoDetails, setCargoDetails] = useState(null);
 
@@ -12,13 +14,13 @@ function CargoDetail() {
         const token = JSON.parse(localStorage.getItem("Token"));
         console.log(token);
         axios
-            .get(`http://localhost:8080/cargo/${id}`, {
+            .get(`http://localhost:8080/driver/actual/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
             })
             .then((response) => {
-                setCargoDetails(response.data);
+                setCargoDetails(response.data[0]);
                 console.log(response.data);
             })
             .catch((error) => {
@@ -26,6 +28,20 @@ function CargoDetail() {
             });
     }, [id]);
 
+    const completeCargo = async (cargoId)=>{
+        console.log(cargoId);
+        try{
+            await axios
+                .get(`http://localhost:8080/driver/complete/${cargoId}`, null, {
+            });
+
+        }
+        catch (error){
+            console.log("Error:", error);
+        }
+    }
+
+    console.log(cargoDetails);
     if (!cargoDetails) return null;
 
     return (
@@ -70,7 +86,7 @@ function CargoDetail() {
                             Data utworzenia
                         </dt>
                         <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                            {cargoDetails.localDateTime}
+                            {cargoDetails.dateTime}
                         </dd>
                     </div>
 
@@ -112,14 +128,15 @@ function CargoDetail() {
                         <dt className="text-sm font-medium leading-6 text-gray-900">
                         </dt>
                         <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                            <a href={`/getJob/${cargoDetails.id}`}>Podejmi ładunek</a>
+                            <button onClick={()=>completeCargo(cargoDetails.id)}>
+                                Zakończ zlecenie!
+                            </button>
                         </dd>
                     </div>
-
                 </dl>
             </div>
         </div>
     );
 }
 
-export default CargoDetail;
+export default DriverActualCargo;

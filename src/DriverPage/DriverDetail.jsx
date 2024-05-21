@@ -32,7 +32,7 @@ function DriverDetail() {
       <div className="flex items-center justify-center min-h-6">
         <div className="bg-white p-3 shadow-sm rounded-sm">
           <div className="text-gray-600">
-            <div className="grid md:grid-cols-6 text-sm border-b-4 border-indigo-500">
+            <div className="grid md:grid-cols-7 text-sm border-b-4 border-indigo-500">
               <GridItemTitle value={"Price"} />
               <GridItemTitle value={"Type"} />
               <GridItemTitle value={"Owner"} />
@@ -43,7 +43,7 @@ function DriverDetail() {
 
           {driver.map((data, index) => (
             <div key={index} className="text-gray-600 border-b-4">
-              <div className="grid md:grid-cols-6 text-sm">
+              <div className="grid md:grid-cols-7 text-sm">
                 <GridItem value={data.price} />
                 <GridItem value={data.typeCargo} />
                 <GridItem value={data.owner} />
@@ -53,6 +53,12 @@ function DriverDetail() {
                 <div className="grid grid-cols-2">
                   <div className="px-4 py-2 font-semibold">
                     <a href={`/cargo/${data.id}`}>details</a>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2">
+                  <div className="px-4 py-2 font-semibold">
+                    <a href="#">Zakończ zlecenie</a>
                   </div>
                 </div>
               </div>
