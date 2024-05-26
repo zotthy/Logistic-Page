@@ -83,12 +83,12 @@ function Driver() {
                             </div>
                             <div className="grid grid-cols-2">
                                 <div className="px-4 py-2 font-semibold">
-                                    <a href={`/driver/cargo/actual/${data.id}`}>Aktualne</a>
+                                    <a href={`/auth/driver/cargo/actual/${data.id}`}>Aktualne</a>
                                 </div>
                             </div>
                             <div className="grid grid-cols-2">
                                 <div className="px-4 py-2 font-semibold">
-                                    <a href={`/driver/cargo/history/${data.id}`}>Historia</a>
+                                    <a href={`/auth/driver/cargo/history/${data.id}`}>Historia</a>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +97,7 @@ function Driver() {
 
                 <div className="text-gray-600">
                     <div className="grid md:grid-cols-1 text-sm">
-                        <a href="/driverNew"
+                        <a href="/auth/driverNew"
                            className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                             Dodaj kierowce
                         </a>

@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import InputField from '../components/inputs/InputField';
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-import InputFieldNumber from '../components/inputs/InputFieldNumber';
 import Labellinput from '../components/labels/LabelInput';
 import Button from '../components/buttons/Button';
+import InputFieldPrice from "../components/inputs/InputFieldPrice.jsx";
+import InputFieldZipCode from "../components/inputs/InputFieldZipCode.jsx";
 
 function Cargo() {
     const navigate = useNavigate();
@@ -52,7 +53,7 @@ function Cargo() {
             );
             console.log(response.data);
             console.log("add Data");
-            navigate("/")
+            navigate("/auth/my/cargo/actual")
         } catch (error) {
             console.error("failed", error);
         }
@@ -61,50 +62,50 @@ function Cargo() {
 
     return (
         <form className="max-w-md mx-auto " onSubmit={CargoAdd}>
-            <h1 className="text-left text-indigo-400 text-lg">Cargo</h1>
+            <h1 className="text-left text-indigo-400 text-lg">Ładunek</h1>
             <div className="relative z-0 w-full mb-5 group">
-                <InputField setData={setPrice}/>
-                <Labellinput>price</Labellinput>
+                <InputFieldPrice setData={setPrice}/>
+                <Labellinput>Cena</Labellinput>
             </div>
             <div className="relative z-0 w-full mb-5 group">
                 <InputField setData={setType}/>
-                <Labellinput>Description cargo</Labellinput>
+                <Labellinput>Opisz ładunek</Labellinput>
             </div>
-            <h1 className="text-left text-indigo-400 text-lg">Load address</h1>
+            <h1 className="text-left text-indigo-400 text-lg">Aderes załadunku</h1>
             <div className="relative z-0 w-full mb-5 group">
-                <InputField setData={setZip_codeload}/>
-                <Labellinput>zip code</Labellinput>
+                <InputFieldZipCode setData={setZip_codeload}/>
+                <Labellinput>Kod pocztowy (00-000)</Labellinput>
             </div>
             <div className="relative z-0 w-full mb-5 group">
                 <InputField setData={setProvinceload}/>
-                <Labellinput>province</Labellinput>
+                <Labellinput>Województwo</Labellinput>
             </div>
             <div className="relative z-0 w-full mb-5 group">
                 <InputField setData={setCityload}/>
-                <Labellinput>city</Labellinput>
+                <Labellinput>Miasto</Labellinput>
             </div>
             <div className="relative z-0 w-full mb-5 group">
                 <InputField setData={setStreetload}/>
-                <Labellinput>street</Labellinput>
+                <Labellinput>Ulica, nr domu</Labellinput>
             </div>
-            <h1 className="text-left text-indigo-400 text-lg">Unload address</h1>
+            <h1 className="text-left text-indigo-400 text-lg">Adres rozładunku</h1>
             <div className="relative z-0 w-full mb-5 group">
                 <InputField setData={setZip_codeunload}/>
-                <Labellinput>zip code</Labellinput>
+                <Labellinput>Kod pocztowy</Labellinput>
             </div>
             <div className="relative z-0 w-full mb-5 group">
                 <InputField setData={setProvinceunload}/>
-                <Labellinput>province</Labellinput>
+                <Labellinput>Województwo</Labellinput>
             </div>
             <div className="relative z-0 w-full mb-5 group">
                 <InputField setData={setCityunload}/>
-                <Labellinput>city</Labellinput>
+                <Labellinput>Miasto</Labellinput>
             </div>
             <div className="relative z-0 w-full mb-5 group">
                 <InputField setData={setStreetunload}/>
-                <Labellinput>street</Labellinput>
+                <Labellinput>Ulica, nr domu</Labellinput>
             </div>
-            <Button>Dodaj</Button>
+            <Button>Dodaj ładunek</Button>
         </form>
     );
 }

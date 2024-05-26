@@ -2,7 +2,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {useParams} from "react-router-dom";
-import MapTest from "/Users/sebastianstarzec/LogisticApiFront/my-project/src/assets/mapTest.png";
+import MapRender from "../components/MapRender/MapRender.jsx";
 
 function CargoDetail() {
     const {id} = useParams();
@@ -99,12 +99,7 @@ function CargoDetail() {
                     <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                         <dt className="text-sm font-medium leading-6 text-gray-900">Mapa</dt>
                         <dd className="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                            <img
-                                width="500"
-                                height="300"
-                                src={MapTest}
-                                className="border-4 rounded-md"
-                            />
+                            <MapRender/>
                         </dd>
                     </div>
 
@@ -112,7 +107,7 @@ function CargoDetail() {
                         <dt className="text-sm font-medium leading-6 text-gray-900">
                         </dt>
                         <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                            <a href={`/getJob/${cargoDetails.id}`}>Podejmi ładunek</a>
+                            <a href={`/auth/getJob/${cargoDetails.id}`}>Podejmi ładunek</a>
                         </dd>
                     </div>
 

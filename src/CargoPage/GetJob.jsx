@@ -44,7 +44,7 @@ function GetJob() {
             );
 
             console.log("Response from backend:", response.data);
-            navigate("/cargo/success");
+            navigate("/auth/cargo/success");
 
         } catch (error) {
             console.error("Error:", error);
