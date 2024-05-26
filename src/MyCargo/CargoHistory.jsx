@@ -52,11 +52,11 @@ function CargoHistory() {
 
                     <div className="text-gray-600">
                         <div className="grid md:grid-cols-6 text-sm border-b-4 border-indigo-500">
-                            <DivData value={"Price"}/>
-                            <DivData value={"Type"}/>
-                            <DivData value={"Owner"}/>
-                            <DivData value={"Loads"}/>
-                            <DivData value={"Unload"}/>
+                            <DivData value={"Cena"}/>
+                            <DivData value={"Opis"}/>
+                            <DivData value={"Właściciel"}/>
+                            <DivData value={"Załadunek"}/>
+                            <DivData value={"Rozładunek"}/>
                         </div>
                     </div>
 
@@ -70,7 +70,7 @@ function CargoHistory() {
                                 <DivData value={data.unloadAddress.city}/>
                                 <div className="grid grid-cols-2">
                                     <div className="px-4 py-2 font-semibold"><a
-                                        href={`/my/cargo/${data.cargoId}`}>edw</a></div>
+                                        href={`/auth/my/cargo/${data.cargoId}`}>Szczegóły</a></div>
                                 </div>
                             </div>
                         </div>

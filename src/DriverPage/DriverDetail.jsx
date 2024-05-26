@@ -52,7 +52,7 @@ function DriverDetail() {
 
                 <div className="grid grid-cols-2">
                   <div className="px-4 py-2 font-semibold">
-                    <a href={`/cargo/${data.id}`}>details</a>
+                    <a href={`/auth/cargo/${data.id}`}>details</a>
                   </div>
                 </div>
 
