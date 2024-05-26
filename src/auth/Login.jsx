@@ -49,7 +49,7 @@ function Login() {
                     </div>
                     <div className="mb-6">
                         <LabelFromAuth>Hasło*</LabelFromAuth>
-                        <InputAuth initialType="text" placeholderPattern="*******" setValue={setPassword}/>
+                        <InputAuth initialType="password" placeholderPattern="*******" setValue={setPassword}/>
                     </div>
                     <ButtonAuth>Login</ButtonAuth>
                 </form>

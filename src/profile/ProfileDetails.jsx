@@ -67,7 +67,6 @@ function ProfileDetails() {
                     <p>Street: {profile.address.street}</p>
                     <p>City: {profile.address.city}</p>
                     <p>Zip Code: {profile.address.zip_code}</p>
-                    <p>Number: {profile.address.number}</p>
                   </div>
                 ) : (
                   <a href="/auth/addAdress" className="text-red-700">Dodaj</a>

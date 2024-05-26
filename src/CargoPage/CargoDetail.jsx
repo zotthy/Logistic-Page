@@ -80,6 +80,7 @@ function CargoDetail() {
                         </dt>
                         <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
                             <p>{cargoDetails.loadAddress.city}</p>
+                            <p>{cargoDetails.loadAddress.street}</p>
                             <p>{cargoDetails.loadAddress.province}</p>
                             <p>{cargoDetails.loadAddress.zip_code}</p>
                         </dd>
@@ -91,6 +92,7 @@ function CargoDetail() {
                         </dt>
                         <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
                             <p>{cargoDetails.unloadAddress.city}</p>
+                            <p>{cargoDetails.unloadAddress.street}</p>
                             <p>{cargoDetails.unloadAddress.province}</p>
                             <p>{cargoDetails.unloadAddress.zip_code}</p>
                         </dd>
@@ -99,7 +101,7 @@ function CargoDetail() {
                     <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                         <dt className="text-sm font-medium leading-6 text-gray-900">Mapa</dt>
                         <dd className="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                            <MapRender/>
+                            <MapRender startAddress={cargoDetails.loadAddress.city} endAddress={cargoDetails.unloadAddress.city}/>
                         </dd>
                     </div>
 
