@@ -48,7 +48,7 @@ function Login() {
                         <InputAuth initialType="text" placeholderPattern="user@com.pl" setValue={setEmail}/>
                     </div>
                     <div className="mb-6">
-                        <LabelFromAuth>Password*</LabelFromAuth>
+                        <LabelFromAuth>Hasło*</LabelFromAuth>
                         <InputAuth initialType="text" placeholderPattern="*******" setValue={setPassword}/>
                     </div>
                     <ButtonAuth>Login</ButtonAuth>

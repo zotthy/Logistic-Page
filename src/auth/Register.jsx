@@ -44,38 +44,29 @@ function Register() {
           </span>
         </div>
         <h2 className="text-2xl font-semibold text-center mb-4">
-          Create a new account
+          Stwórz nowe konto!
         </h2>
         <p className="text-gray-600 text-center mb-6">
-          Enter your details to register.
+          Wprowadź swoje dane, aby się zarejestrować.
         </p>
         <form onSubmit={registerRequest}>
           <div className="mb-4">
-            <LabelFromAuth>Name</LabelFromAuth>
+            <LabelFromAuth>Imię</LabelFromAuth>
             <InputAuth initialType="text" placeholderPattern="James" setValue={setName}/>
           </div>
           <div className="mb-4">
-            <LabelFromAuth>Surname</LabelFromAuth>
+            <LabelFromAuth>Nazwisko</LabelFromAuth>
             <InputAuth initialType="text" placeholderPattern="Kowalski" setValue={setSurname}/>
           </div>
           <div className="mb-4">
-            <LabelFromAuth>E-mail</LabelFromAuth>
+            <LabelFromAuth>Adres e-mail</LabelFromAuth>
             <InputAuth initialType="email" placeholderPattern="JamesKow@com.pl" setValue={setEmail}/>
           </div>
           <div className="mb-6">
             <LabelFromAuth>Password</LabelFromAuth>
             <InputAuth initialType="password" placeholderPattern="*******" setValue={setPassword}/>
-            <p className="text-gray-600 text-xs mt-1">
-             Min. 8 characters.
-            </p>
           </div>
             <ButtonAuth>Register</ButtonAuth>
-          <p className="text-gray-600 text-xs text-center mt-4">
-            By clicking Register, you agree to accept Apex Financial's
-            <a href="#" className="text-blue-500 hover:underline">
-              Terms and Conditions
-            </a>
-          </p>
         </form>
       </div>
     </div>

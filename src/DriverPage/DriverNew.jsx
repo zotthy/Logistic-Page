@@ -34,7 +34,7 @@ const DriverNew = () => {
             );
             console.log(response.data);
             console.log("add Data");
-            navigate("/")
+            navigate("/auth/driver")
         } catch (error) {
             console.error("failed", error);
         }
@@ -45,19 +45,19 @@ const DriverNew = () => {
         <form onSubmit={DriverAdd} className="max-w-md mx-auto">
             <div className="relative z-0 w-full mb-5 group">
                 <InputField setData={setName}/>
-                <Labellinput>Name</Labellinput>
+                <Labellinput>Imię</Labellinput>
             </div>
             <div className="relative z-0 w-full mb-5 group">
                 <InputField setData={setSurname}/>
-                <Labellinput>Surname</Labellinput>
+                <Labellinput>Nazwisko</Labellinput>
             </div>
             <div className="relative z-0 w-full mb-5 group">
                 <InputField setData={setEmail}/>
-                <Labellinput>E-mail</Labellinput>
+                <Labellinput>Adres e-mail</Labellinput>
             </div>
             <div className="relative z-0 w-full mb-5 group">
                 <InputFieldNumber setData={setPhonenumber}/>
-                <Labellinput>number</Labellinput>
+                <Labellinput>numer telefonu</Labellinput>
             </div>
             <Button>Dodaj</Button>
         </form>
