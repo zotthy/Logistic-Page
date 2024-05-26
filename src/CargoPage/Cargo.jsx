@@ -56,6 +56,7 @@ function Cargo() {
         } catch (error) {
             console.error("failed", error);
         }
+        console.log("fdknvjbshvkwnjfdv");
     };
 
     return (

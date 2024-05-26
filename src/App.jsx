@@ -22,7 +22,7 @@ import Success from "./SuccessPage/Success.jsx";
 import DriverActualCargo from "./DriverPage/DriverActualCargo.jsx";
 import DriverHistoryCargo from "./DriverPage/DriverHistoryCargo.jsx";
 import Layout from "./Layout/Layout.jsx";
-import HomePage from "./HomePage/HomePage.jsx";
+import HomePage from './HomePage/HomePage.jsx';
 import StartPage from "./StartPage/StartPage.jsx";
 
 
@@ -32,13 +32,13 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
-                <Route path="/login" element={<Login/>}/>
-                <Route path="/register" element={<Register/>}/>
-                <Route path="/success" element={<RegisterSuccess/>}/>
-                <Route path="/fail" element={<RegisterFail/>}/>
+                <Route path="login" element={<Login/>}/>
+                <Route path="register" element={<Register/>}/>
+                <Route path="success" element={<RegisterSuccess/>}/>
+                <Route path="fail" element={<RegisterFail/>}/>
 
-                <Route element={<Layout/>}>
-                    <Route path="/auth/*" element={<Protect/>}>
+                <Route path="auth/*" element={<Protect/>}>
+                    <Route element={<Layout/>}>
                         <Route path="home" element={<StartPage/>}/>
                         <Route path="myProfile" element={<ProfileDetails/>}/>
                         <Route path="addAdress" element={<ProfileAddAddress/>}/>

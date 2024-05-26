@@ -1,13 +1,21 @@
 import { Outlet, useNavigate } from 'react-router-dom';
 
-function Protect() {
+// eslint-disable-next-line react/prop-types
+function Protect({ children }) {
   const navigate = useNavigate();
 
   if (!localStorage.getItem('Token')) {
+    console.log('nie zalogowno');
     navigate('/login');
   }
-  
-  return <Outlet />;
+
+  console.log('zalogowano');
+  return (
+      <>
+        <Outlet />
+        {children}
+      </>
+  );
 }
 
 export default Protect;

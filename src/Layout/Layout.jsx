@@ -1,16 +1,14 @@
-
-
+import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import { Outlet } from 'react-router-dom';
 
-// eslint-disable-next-line react/prop-types
-function Layout({children}) {
+export default function Layout() {
     return (
         <>
             <Header/>
-            {children}
+            <Outlet /> {/* Use Outlet to render child routes */}
             <Footer/>
         </>
     );
 }
-export default Layout;

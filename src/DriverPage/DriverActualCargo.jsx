@@ -3,8 +3,6 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {useParams} from "react-router-dom";
 import MapTest from "../assets/mapTest.png";
-import Button from "../components/buttons/Button.jsx";
-import {data} from "autoprefixer";
 
 function DriverActualCargo() {
     const {id} = useParams();
