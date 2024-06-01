@@ -19,7 +19,7 @@ const DriverNew = () => {
         try {
             const token = JSON.parse(localStorage.getItem("Token"));
             const response = await axios.post(
-                "http://localhost:8080/driverNew",
+                import.meta.env.VITE_API_URL+"/driverNew",
                 {
                     name,
                     surname,

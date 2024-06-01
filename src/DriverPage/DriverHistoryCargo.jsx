@@ -13,7 +13,7 @@ function DriverHistoryCargo() {
     useEffect(() => {
         const token = JSON.parse(localStorage.getItem("Token"));
         axios
-            .get(`http://localhost:8080/driver/history/${id}`, {
+            .get(`${import.meta.env.VITE_API_URL}/driver/history/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

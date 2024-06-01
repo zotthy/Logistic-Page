@@ -13,7 +13,7 @@ function GetJob() {
         const token = JSON.parse(localStorage.getItem("Token"));
         console.log(token);
         axios
-            .get(`http://localhost:8080/drivers/avalible`, {
+            .get(`${import.meta.env.VITE_API_URL}/drivers/avalible`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -34,7 +34,7 @@ function GetJob() {
             console.log(token);
 
             const response = await axios.post(
-                `http://localhost:8080/orders/cargo/${id}/take/${driverId}`,
+                `${import.meta.env.VITE_API_URL}/orders/cargo/${id}/take/${driverId}`,
                 null,
                 {
                     headers: {

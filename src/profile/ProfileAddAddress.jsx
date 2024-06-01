@@ -14,7 +14,7 @@ function ProfileAddAddress() {
     try {
       const token = JSON.parse(localStorage.getItem("Token"));
       const response = await axios.post(
-        "http://localhost:8080/profile/address",
+        import.meta.env.VITE_API_URL+"/profile/address",
         {
           street,
           city,

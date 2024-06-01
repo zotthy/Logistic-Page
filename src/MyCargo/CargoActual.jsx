@@ -12,7 +12,7 @@ function CargoActual() {
         const token = JSON.parse(localStorage.getItem("Token"));
         console.log(token);
         axios
-            .get(`http://localhost:8080/my/actual/cargo?page=${currentPage - 1}`, {
+            .get(`${import.meta.env.VITE_API_URL}/my/actual/cargo?page=${currentPage - 1}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

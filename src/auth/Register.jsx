@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
-import RegisterFail from './RegisterFail';
 import InputAuth from '../components/inputs/InputAuth';
 import LabelFromAuth from '../components/labels/LabelFromAuth';
 import ButtonAuth from '../components/buttons/ButtonAuth';
@@ -17,7 +16,7 @@ function Register() {
     const registerRequest = async (e) => {
       e.preventDefault();
       try {
-        const response = await axios.post(`http://localhost:8080/register`, {
+        await axios.post(`${import.meta.env.VITE_API_URL}/register`, {
           firstName: name,
           lastName:surname,
           email:email,
