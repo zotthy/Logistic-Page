@@ -1,6 +1,6 @@
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
-import logo from "/Users/sebastianstarzec/LogisticApiFront/my-project/src/assets/logo.svg";
+import logo from "../assets/logo.svg";
 
 function Header() {
     const navigate = useNavigate();

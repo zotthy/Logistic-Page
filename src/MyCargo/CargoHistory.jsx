@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react'
 import axios from "axios";
-import BoxIcon from '/Users/sebastianstarzec/LogisticApiFront/my-project/src/assets/box.svg'
+import BoxIcon from '../assets/box.svg'
 import DivData from "../components/DataDisplay/DivData.jsx";
 
 

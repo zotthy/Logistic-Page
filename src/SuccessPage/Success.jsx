@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from "react";
-import SuccesIcon from "/Users/sebastianstarzec/LogisticApiFront/my-project/src/assets/correct-success-tick-svgrepo-com.svg";
+import SuccesIcon from "../assets/correct-success-tick-svgrepo-com.svg";
 
 function SuccessPage() {
     return(

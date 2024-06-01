@@ -42,7 +42,7 @@ function Login() {
                     Zaloguj się!
                 </h2>
                 <form onSubmit={loginRequest}>
-                    <div className="mb-4">
+                    <div className="mb-4">F
                         <LabelFromAuth>E-mail*</LabelFromAuth>
                         <InputAuth initialType="text" placeholderPattern="user@com.pl" setValue={setEmail}/>
                     </div>
