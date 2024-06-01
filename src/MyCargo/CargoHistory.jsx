@@ -13,7 +13,7 @@ function CargoHistory() {
         const token = JSON.parse(localStorage.getItem("Token"));
         console.log(token);
         axios
-            .get(`http://localhost:8080/my/history/cargo?page=${currentPage - 1}`, {
+            .get(`${import.meta.env.VITE_API_URL}/my/history/cargo?page=${currentPage - 1}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

@@ -11,7 +11,7 @@ function CargoMyList(){
         const token = JSON.parse(localStorage.getItem("Token"));
         console.log(token);
         axios
-        .get(`http://localhost:8080/my/cargo?page=${currentPage-1}`, {
+        .get(`${import.meta.env.VITE_API_URL}/my/cargo?page=${currentPage-1}`, {
             headers: {
             Authorization: `Bearer ${token}`,
             },

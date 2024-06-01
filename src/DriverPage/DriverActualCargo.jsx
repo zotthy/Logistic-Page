@@ -12,7 +12,7 @@ function DriverActualCargo() {
         const token = JSON.parse(localStorage.getItem("Token"));
         console.log(token);
         axios
-            .get(`http://localhost:8080/driver/actual/${id}`, {
+            .get(`${import.meta.env.VITE_API_URL}/driver/actual/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -30,7 +30,7 @@ function DriverActualCargo() {
         console.log(cargoId);
         try{
             await axios
-                .get(`http://localhost:8080/driver/complete/${cargoId}`, null, {
+                .get(`${import.meta.env.VITE_API_URL}/driver/complete/${cargoId}`, null, {
             });
 
         }

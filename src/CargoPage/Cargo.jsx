@@ -28,7 +28,7 @@ function Cargo() {
         try {
             const token = JSON.parse(localStorage.getItem("Token"));
             const response = await axios.post(
-                "http://localhost:8080/cargo/add",
+                import.meta.env.VITE_API_URL+"/cargo/add",
                 {
                     price: price,
                     typeCargo: type,

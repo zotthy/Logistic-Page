@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import axios from "axios";
 import {useNavigate} from 'react-router-dom';
 import InputAuth from '../components/inputs/InputAuth';
@@ -15,7 +15,7 @@ function Login() {
     const loginRequest = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`http://localhost:8080/login`, {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/login`, {
                 username: email,
                 password: password
             });

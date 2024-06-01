@@ -8,7 +8,7 @@ function ProfileDetails() {
     const token = JSON.parse(localStorage.getItem("Token"));
     console.log(token);
     axios
-      .get(`http://localhost:8080/profile`, {
+      .get(`${import.meta.env.VITE_API_URL}/profile`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

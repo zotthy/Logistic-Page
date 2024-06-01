@@ -11,7 +11,7 @@ function DriverDetail() {
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("Token"));
     axios
-      .get(`http://localhost:8080/driver/${id}/cargos`, {
+      .get(`${import.meta.env.VITE_API_URL}/driver/${id}/cargos`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
