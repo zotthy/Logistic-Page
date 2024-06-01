@@ -5,7 +5,7 @@ import RegisterFail from './RegisterFail';
 import InputAuth from '../components/inputs/InputAuth';
 import LabelFromAuth from '../components/labels/LabelFromAuth';
 import ButtonAuth from '../components/buttons/ButtonAuth';
-import userIcon from "/Users/sebastianstarzec/LogisticApiFront/my-project/src/assets/userIcon.svg"
+import userIcon from "../assets/userIcon.svg"
 
 function Register() {
     const navigate = useNavigate();
