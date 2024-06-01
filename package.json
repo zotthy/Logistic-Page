@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.19.3",
     "axios": "^1.6.8",
     "cors": "^2.8.5",
     "leaflet": "^1.9.4",
@@ -20,7 +19,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
-    "react-ol": "^0.1.12",
     "route": "^0.2.5"
   },
   "devDependencies": {
