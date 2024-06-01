@@ -32,22 +32,22 @@ function CargoMyDetails() {
     <div>
       <div className="px-4 sm:px-0">
         <h1 className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
-          Cargo detail
+          Szczególy ładunku
         </h1>
       </div>
       <div className="mt-6 border-t border-gray-100">
         <dl className="divide-y divide-gray-100">
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">
-              Price
+              Stawka za przewóz
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              {cargoDetails.cargoPrice}
+              {`${cargoDetails.price} zł`}
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">
-              Type cargo
+              Opis
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
               {cargoDetails.typeCargo}
@@ -56,7 +56,7 @@ function CargoMyDetails() {
         
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">
-              Create cargo date
+              Data utworzenia
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
               {cargoDetails.cargoDateTime}
@@ -65,7 +65,7 @@ function CargoMyDetails() {
 
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">
-              Load address
+              Adres załadunku
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
               <p>{cargoDetails.loadAddress.city}</p>
@@ -77,7 +77,7 @@ function CargoMyDetails() {
 
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">
-              Unload address
+              Adres rozładunku
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
               <p>{cargoDetails.unloadAddress.city}</p>
@@ -89,7 +89,7 @@ function CargoMyDetails() {
 
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">
-              Carrier
+              Przewoźnik
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
               <p>{cargoDetails.handlerFirstName}</p>
@@ -99,7 +99,7 @@ function CargoMyDetails() {
 
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">
-              Driver
+              Kierowca
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
               <p>{cargoDetails.driverFirstName}</p>
@@ -108,7 +108,7 @@ function CargoMyDetails() {
           </div>
 
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">Map</dt>
+            <dt className="text-sm font-medium leading-6 text-gray-900">Mapa</dt>
             <dd className="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
               <MapRender startAddress={cargoDetails.loadAddress.city} endAddress={cargoDetails.unloadAddress.city}/>
             </dd>

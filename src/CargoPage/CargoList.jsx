@@ -58,11 +58,11 @@ function CargoList() {
 
           <div className="text-gray-600">
             <div className="grid md:grid-cols-6 text-sm border-b-4 border-indigo-500">
-              <GridItemTitle value={"Price"} />
-              <GridItemTitle value={"Type"} />
-              <GridItemTitle value={"Owner"} />
-              <GridItemTitle value={"Loads"} />
-              <GridItemTitle value={"Unload"} />
+              <GridItemTitle value={"Stawka za przewóz"} />
+              <GridItemTitle value={"Opis"} />
+              <GridItemTitle value={"Właściciel"} />
+              <GridItemTitle value={"Adres załadunku"} />
+              <GridItemTitle value={"Adres rozładunku"} />
             </div>
           </div>
 
@@ -77,7 +77,7 @@ function CargoList() {
 
                 <div className="grid grid-cols-2">
                   <div className="px-4 py-2 font-semibold">
-                    <a href={`/auth/cargo/${data.cargoId}`}>details</a>
+                    <a href={`/auth/cargo/${data.cargoId}`}>Szczegóły</a>
                   </div>
                 </div>
               </div>

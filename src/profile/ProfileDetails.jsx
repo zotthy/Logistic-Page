@@ -39,16 +39,16 @@ function ProfileDetails() {
               <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
           </span>
-          <span className="tracking-wide">My Profile</span>
+          <span className="tracking-wide">Mój profil</span>
         </div>
         <div className="text-gray-700">
           <div className="grid md:grid-cols-2 text-sm">
             <div className="grid grid-cols-2">
-              <div className="px-4 py-2 font-semibold">First Name</div>
+              <div className="px-4 py-2 font-semibold">Imię</div>
               <div className="px-4 py-2">{profile.firstName}</div>
             </div>
             <div className="grid grid-cols-2">
-              <div className="px-4 py-2 font-semibold">Last Name</div>
+              <div className="px-4 py-2 font-semibold">Nazwisko</div>
               <div className="px-4 py-2">{profile.lastName}</div>
             </div>
             <div className="grid grid-cols-2">
@@ -64,9 +64,9 @@ function ProfileDetails() {
               <div className="px-4 py-2">
                 {profile.address ? (
                   <div>
-                    <p>Street: {profile.address.street}</p>
-                    <p>City: {profile.address.city}</p>
-                    <p>Zip Code: {profile.address.zip_code}</p>
+                    <p>Ulica: {profile.address.street}</p>
+                    <p>Miasto: {profile.address.city}</p>
+                    <p>Kod pocztowy: {profile.address.zip_code}</p>
                   </div>
                 ) : (
                   <a href="/auth/addAdress" className="text-red-700">Dodaj</a>

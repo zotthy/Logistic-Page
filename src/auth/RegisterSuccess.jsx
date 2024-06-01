@@ -9,12 +9,12 @@ function RegitserSussess(){
             </path>
         </svg>
         <div className="text-center">
-            <h3 className="md:text-2xl text-base text-gray-900 font-semibold text-center">Register is done</h3>
-            <p className="text-gray-600 my-2">Thank you for register a account</p>
-            <p> Have a great day!  </p>
+            <h3 className="md:text-2xl text-base text-gray-900 font-semibold text-center">Udało się zalorzyć konto</h3>
+            <p className="text-gray-600 my-2">Dziekujemuy za załorzenie konta</p>
+            <p> Miłego dnia</p>
             <div className="py-10 text-center">
                 <a href="/login" className="px-12 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3">
-                    GO Login 
+                    Zaloguj sie!
                </a>
             </div>
         </div>
