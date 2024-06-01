@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import BoxIcon from "/Users/sebastianstarzec/LogisticApiFront/my-project/src/assets/box.svg";
+import BoxIcon from "../assets/box.svg";
 import GridItem from "../components/DataDisplay/GridItem";
 import GridItemTitle from "../components/DataDisplay/GridItemTitle";
 
