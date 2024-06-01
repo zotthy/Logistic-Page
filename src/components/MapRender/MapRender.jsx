@@ -20,7 +20,7 @@ const MapComponent = ({ startAddress, endAddress }) => {
             const { lat, lng } = response.data.results[0].geometry;
             return [lat, lng];
         } catch (error) {
-            console.error('Error fetching coordinates:', error);
+            console.error('Error:', error);
             return null;
         }
     };

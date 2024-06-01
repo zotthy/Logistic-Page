@@ -50,10 +50,9 @@ function CargoActual() {
                     </div>
 
                     <div className="text-gray-600">
-                        <div className="grid md:grid-cols-6 text-sm border-b-4 border-indigo-500">
-                            <DivData value={"Cena"}/>
+                        <div className="grid md:grid-cols-5 text-sm border-b-4 border-indigo-500">
+                            <DivData value={"Cena w zł"}/>
                             <DivData value={"Opis"}/>
-                            <DivData value={"Właściciel"}/>
                             <DivData value={"Załadunek"}/>
                             <DivData value={"Rozładunek"}/>
                         </div>
@@ -61,10 +60,9 @@ function CargoActual() {
 
                     {actualCargo.map((data, index) =>
                         <div key={index} className="text-gray-600 border-b-4">
-                            <div className="grid md:grid-cols-6 text-sm">
+                            <div className="grid md:grid-cols-5 text-sm">
                                 <DivData value={data.cargoPrice}/>
                                 <DivData value={data.typeCargo}/>
-                                <DivData value={data.cargoOwner}/>
                                 <DivData value={data.loadAddress.city}/>
                                 <DivData value={data.unloadAddress.city}/>
                                 <div className="grid grid-cols-2">

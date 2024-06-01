@@ -40,19 +40,19 @@ function Driver() {
               <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
             </svg>
           </span>
-                    <span className="tracking-wide">Driver</span>
+                    <span className="tracking-wide">Kierowcy</span>
                 </div>
 
                 <div className="text-gray-600">
                     <div className="grid md:grid-cols-5 text-sm">
                         <div className="grid grid-cols-2">
-                            <div className="px-4 py-2 font-semibold">First Name</div>
+                            <div className="px-4 py-2 font-semibold">Imię</div>
                         </div>
                         <div className="grid grid-cols-2">
-                            <div className="px-4 py-2 font-semibold">Last Name</div>
+                            <div className="px-4 py-2 font-semibold">Nazwisko</div>
                         </div>
                         <div className="grid grid-cols-2">
-                            <div className="px-4 py-2 font-semibold">Phone number</div>
+                            <div className="px-4 py-2 font-semibold">Numer telefonu</div>
                             <div className="px-4 py-2">
                             </div>
                         </div>

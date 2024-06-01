@@ -57,7 +57,7 @@ function DriverActualCargo() {
                             Koszt przewozu
                         </dt>
                         <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                            {cargoDetails.price}
+                            {`${cargoDetails.price} zł`}
                         </dd>
                     </div>
 

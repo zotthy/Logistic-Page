@@ -4,6 +4,8 @@ import {useNavigate} from 'react-router-dom';
 import InputAuth from '../components/inputs/InputAuth';
 import LabelFromAuth from '../components/labels/LabelFromAuth';
 import ButtonAuth from '../components/buttons/ButtonAuth';
+import BackButton from "../components/buttons/BackButton.jsx";
+import UserIcon from "../assets/userIcon.svg";
 
 function Login() {
     const navigate = useNavigate();
@@ -30,17 +32,14 @@ function Login() {
             <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
                 <div className="flex justify-center mb-6">
           <span className="inline-block bg-gray-200 rounded-full p-3">
-            <svg
-                xmlns=""
-                width="24"
-                height="24"
-                viewBox="0 0 24 24">
-              <path fill="currentColor"/>
-            </svg>
+              <img src={UserIcon} alt="USerIcon" xmlns=""
+                   width="24"
+                   height="24"
+                   viewBox="0 0 24 24"/>
           </span>
                 </div>
                 <h2 className="text-2xl font-semibold text-center mb-4">
-                    Login to your account
+                    Zaloguj się!
                 </h2>
                 <form onSubmit={loginRequest}>
                     <div className="mb-4">
@@ -51,8 +50,14 @@ function Login() {
                         <LabelFromAuth>Hasło*</LabelFromAuth>
                         <InputAuth initialType="password" placeholderPattern="*******" setValue={setPassword}/>
                     </div>
-                    <ButtonAuth>Login</ButtonAuth>
+                    <div className="mb-3">
+                        <ButtonAuth>Login</ButtonAuth>
+                    </div>
                 </form>
+                <div
+                    className="mb-3 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 ">
+                    <BackButton to='/'>Strona głowna</BackButton>
+                </div>
             </div>
         </div>
     );
