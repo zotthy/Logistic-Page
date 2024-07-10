@@ -10,7 +10,7 @@ function StartPage() {
                 <div className="text-lg text-gray-700 mb-4">Temat pracy: Opracowanie i wdrożenie platformy logistycznej
                     w branży transportowej
                 </div>
-                <div className="text-lg text-gray-700">Autor: Sebastian Strzec</div>
+                <div className="text-lg text-gray-700">Autor: Sebastian Starzec</div>
             </div>
         </div>
     );
