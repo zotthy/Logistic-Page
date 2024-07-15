@@ -1,1 +1,1 @@
-Informacje: https://github.com/zotthy/Praca-dyplomowa.git
+# Informacje: https://github.com/zotthy/Praca-dyplomowa.git
