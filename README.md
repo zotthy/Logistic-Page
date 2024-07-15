@@ -1,3 +1,1 @@
-# React + Vite
-
-Frontend do aplikacji Logistic APi
+Informacje: https://github.com/zotthy/Praca-dyplomowa.git
